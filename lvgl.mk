@@ -1,7 +1,8 @@
 NAME := lvgl
 
+include config/$(KCONFIG_CONFIG)
 
-$(NAME)_SRCS += \
+$(NAME)_SRCS = \
 	src/lv_core/lv_debug.c \
 	src/lv_core/lv_disp.c \
 	src/lv_core/lv_group.c \
@@ -21,15 +22,8 @@ $(NAME)_SRCS += \
 	src/lv_draw/lv_img_decoder.c \
 	src/lv_font/lv_font.c \
 	src/lv_font/lv_font_fmt_txt.c \
-	src/lv_font/lv_font_chinese_11.c \
 	src/lv_font/lv_font_chinese_9.c \
-	src/lv_font/lv_font_roboto_12.c \
-	src/lv_font/lv_font_roboto_12_subpx.c \
 	src/lv_font/lv_font_roboto_16.c \
-	src/lv_font/lv_font_roboto_22.c \
-	src/lv_font/lv_font_roboto_28.c \
-	src/lv_font/lv_font_roboto_28_compressed.c \
-	src/lv_font/lv_font_unscii_8.c \
 	src/lv_font/quec_font.c	\
 	src/lv_hal/lv_hal_disp.c \
 	src/lv_hal/lv_hal_indev.c \
@@ -94,7 +88,7 @@ $(NAME)_SRCS += \
 	src/lv_themes/lv_theme_zen.c \
 	src/lv_misc/lv_circ.c 
 
-GLOBAL_INCS += \
+GLOBAL_INCS = \
 	. \
 	porting \
 	src \
@@ -104,8 +98,7 @@ GLOBAL_INCS += \
 	src/lv_hal \
 	src/lv_misc \
 	src/lv_objx \
-	src/lv_themes
-
+	src/lv_themes 
 
 $(NAME)_CFLAGS = \
 	-Wno-error=unused-parameter \
