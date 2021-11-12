@@ -145,6 +145,8 @@ LV_FONT_DECLARE(lv_font_roboto_16)
 #endif
 
 LV_FONT_DECLARE(quec_font)
+LV_FONT_DECLARE(lv_font_chinese_16)
+
 
 
 #if LV_FONT_ROBOTO_22
