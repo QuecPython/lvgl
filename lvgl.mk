@@ -86,7 +86,10 @@ $(NAME)_SRCS = \
 	src/lv_themes/lv_theme_night.c \
 	src/lv_themes/lv_theme_templ.c \
 	src/lv_themes/lv_theme_zen.c \
-	src/lv_misc/lv_circ.c 
+	src/lv_misc/lv_circ.c \
+	src/lv_lib_png/lodepng.c \
+	src/lv_lib_png/lv_png.c
+	
 
 GLOBAL_INCS = \
 	. \
@@ -98,12 +101,18 @@ GLOBAL_INCS = \
 	src/lv_hal \
 	src/lv_misc \
 	src/lv_objx \
-	src/lv_themes 
+	src/lv_themes \
+	src/lv_lib_png
 
 $(NAME)_CFLAGS = \
 	-Wno-error=unused-parameter \
 	-Wno-error=unused-variable \
 	-Wno-error=sign-compare \
+	-Wno-error=incompatible-pointer-types \
+	-Wno-error=type-limits \
+	-Wno-error=unused-function \
+	-Wno-error=format= \
+	-Wno-error=discarded-qualifiers
 
 $(NAME)_COMPONENTS = peripheral
 
